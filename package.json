@@ -1,0 +1,17 @@
+{
+  "name": "cscradio",
+  "version": "0.0.0",
+  "description": "Communicating outside of our little slack silos",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "commander": "^2.3.0",
+    "express": "^4.8.8",
+    "jade": "^1.11.0",
+    "mongoose": "^4.2.2",
+    "request": "^2.42.0",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "lint": "jshint ."
+  }
+}

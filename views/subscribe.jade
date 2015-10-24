@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    title Collaborative Software Consortium Radio
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='/subscribe.js')
+  body
+    h1 Enable your slack team to communicate and receive messages over the CSC Radio
+    if status === 'good'
+      p(style='background: #589983; color: white;') You joined the CSC Radio!
+    else if status === 'bad'
+      p(style='background: #A94442; color: white;') There was an error, please try again.
+    div put instructions here
+    br
+    br
+    form(
+      action='/subscribe'
+      method='post'
+    )
+      label(for='token') Add the token for your slash command integration, so we can verify messages from you
+      br
+      br
+      input#token(
+        size='50'
+        type='text'
+        name='token'
+        required
+      )
+      br
+      br
+      label(for='webhook') Add the url for the incoming webhook that you created, so that you can receive messages sent to the CSC Radio
+      br
+      br
+      input#webhook(
+        size='150'
+        type='text'
+        name='webhook'
+        required
+      )
+      br
+      br
+      input#submit(
+        type='submit'
+        value='Join!'
+      )
+      
